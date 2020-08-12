@@ -12,15 +12,15 @@ public class Configuration {
     public static String validAdminUserPassword;
     
     
-    public static void init() throws FileNotFoundException, IOException{
-        Properties properties = new Properties();
-        FileInputStream fis = new FileInputStream("env.properties");
+public static void init() throws FileNotFoundException, IOException{
+    Properties properties = new Properties();
+    FileInputStream fis = new FileInputStream("env.properties");
         
-        properties.load(fis);
+    properties.load(fis);
         
-        operaDriverPath = properties.getProperty("operaDriverPath");
-        validAdminUserEmail = properties.getProperty("validAdminUserEmail");
-        validAdminUserPassword = properties.getProperty("validAdminUserPassword");
+    operaDriverPath = properties.getProperty("operaDriverPath");
+    validAdminUserEmail = properties.getProperty("validAdminUserEmail");
+    validAdminUserPassword = properties.getProperty("validAdminUserPassword");
     }
     
     

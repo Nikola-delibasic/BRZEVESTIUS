@@ -30,7 +30,7 @@ protected static WebDriver driver;
     @AfterClass
     public static void tearDownClass() throws InterruptedException {
 //        Thread.sleep(200);
-        driver.quit();
+//        driver.quit();
     }
     
 

@@ -15,11 +15,9 @@ import static org.junit.Assert.*;
 import pages.DashboardPage;
 import pages.LoginPage;
 import pages.SignaturesPage;
+import pages.CategoriesPage;
 
-/**
- *
- * @author joshu
- */
+
 public class DashboardTest extends BaseTest {
     
     public DashboardTest() {
@@ -65,7 +63,7 @@ public class DashboardTest extends BaseTest {
         SignaturesPage signaturesPage = new SignaturesPage(driver);
         
 //        
-        SignaturesPage signaturesPage2 = dashboardPage.clickOnSignaturesNavLink2();
+//        SignaturesPage signaturesPage2 = dashboardPage.clickOnSignaturesNavLink2();
 //        
 //        
         
@@ -77,7 +75,14 @@ public class DashboardTest extends BaseTest {
     
     @Test
     public void testCategoriesLink(){
-        dashboardPage.clickOnCategoriesNavLink();
+       CategoriesPage categoriesPage = dashboardPage.clickOnCategoriesNavLink();
+        
+        String expectedPanelHeadingText = "Categories";
+        String actualPanelHeadingText = categoriesPage.getPanelHeadingText();
+        
+        assertTrue("Failed panel text doesnt match",expectedPanelHeadingText.equals(actualPanelHeadingText));
+        
+
     }   
 }
 
